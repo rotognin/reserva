@@ -1,0 +1,26 @@
+{
+    "name": "rodrigotognin/reserva",
+    "description": "Reserva de Quartos de Hotel",
+    "require": {
+        "coffeecode/datalayer": "1.1.*",
+        "phpmailer/phpmailer": "^6.5"
+    },
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/"
+        },
+        "files": [
+            "src/config.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Rodrigo Tognin",
+            "email": "rotog@outlook.com"
+        }
+    ],
+    "config": {
+        "vendor-dir": "vendor/"
+    }
+}
