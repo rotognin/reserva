@@ -4,7 +4,6 @@
 
 <em>Projeto sendo desenvolvido como estudo</em>
 
-
 ## Ambientes:
 
 - <strong>Administrativo:</strong> Apenas o administrador do sistema terá acesso. Nesse ambiente terá o cadastro de quartos, andares, categorias de quartos com valores e algumas parametrizações e funções específicas.
@@ -26,7 +25,7 @@ prática.</em>
 - Acesse a pasta via linha de comando
 - Execute o comando: <code>composer update</code> para baixar as dependências do projeto
 - No MySQL crie um banco com o nome <code>reserva_db</code>
-- Rode o script <code>docs/tabelas.sql</code> no banco para criar as tabelas do sistema
+- Rode o script <code>docs/script.sql</code> no banco para criar as tabelas do sistema
   - Será criado o usuário "admin" no banco, senha "123", com acesso ao ambiente administrativo.
 - Ajuste as configurações de acesso ao banco de dados no arquivo <code>src/config.php</code>
 
