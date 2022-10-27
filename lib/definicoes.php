@@ -14,6 +14,6 @@ define("NIVEL", array(
 ));
 
 define("STATUS", array(
-    '0' => 'Ativo',
-    '1' => 'Inativo'
+    '1' => 'Ativo',
+    '0' => 'Inativo'
 ));
