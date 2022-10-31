@@ -29,6 +29,15 @@
                         <br>
                         <input type="submit" value="Entrar" class="btn botao">
                     </form>
+                    <br>
+                    <?php  
+                        if ($mensagem != ''){
+                            echo '<div class="w3-panel w3-red>';
+                                echo '<h3>Aviso!</h3>';
+                                echo '<p>' . $mensagem . '</p>';
+                            echo '</div>';
+                        }
+                    ?>
                 </div>
                 <footer class="w3-container w3-blue w3-center w3-padding">
                     <a href="<?php echo $rota('principal'); ?>">Voltar ao menu principal</a>
