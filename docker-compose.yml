@@ -1,0 +1,33 @@
+version: "3"
+services:
+    web:
+        build: .
+        restart: always
+        ports:
+            - "8000:80"
+        volumes:
+            - ./:/var/www/html
+        networks:
+            - default
+        environment:
+            DB_C_HOST: db
+            DB_C_USER: root
+            DB_C_PASS: 123456
+
+    db:
+        image: mysql:5.7
+        restart: always
+        ports:
+            - "3306:3306"
+        volumes:
+            - db_data:/var/lib/mysql
+        environment:
+            MYSQL_DATABASE: reserva_db
+            MYSQL_USER: rodrigo
+            MYSQL_PASSWORD: 123456
+            MYSQL_ROOT_PASSWORD: 123456
+        networks:
+            - default
+
+volumes:
+    db_data:

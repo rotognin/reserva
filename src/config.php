@@ -6,7 +6,7 @@ define("DATA_LAYER_CONFIG", [
     "port" => "3306",
     "dbname" => "reserva_db",
     "username" => "root",
-    "passwd" => "",
+    "passwd" => "123456",
     "options" => [
         PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
