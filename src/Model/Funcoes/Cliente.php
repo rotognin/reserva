@@ -1,8 +1,8 @@
 <?php
 
-namespace Src\Model\Functions;
+namespace Src\Model\Funcoes;
 
-use Src\Model\Entities\Clientes;
+use Src\Model\Entidades\Clientes;
 use Lib\Funcoes;
 
 class Cliente

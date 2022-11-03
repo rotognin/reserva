@@ -21,9 +21,12 @@
                 </div>
                 <footer class="w3-container w3-blue w3-center w3-padding">
                     <a href="<?php echo $rota('login', 'login'); ?>">Clique aqui para entrar no sistema!</a>
-                </footer>
-                    
+                </footer>                    
             </div>
+        </div>
+        <br>
+        <div class="w3-container w3-card w3-margin w3-center w3-padding w3-blue">
+            <a href="<?php echo $rota('login', 'admin'); ?>">Acesso administrativo</a>
         </div>
     </body>
 </html>
