@@ -2,7 +2,7 @@
     "name": "rodrigotognin/reserva",
     "description": "Reserva de Quartos de Hotel",
     "require": {
-        "coffeecode/datalayer": "1.1.*",
+        "coffeecode/datalayer": "2.0.*",
         "phpmailer/phpmailer": "^6.5"
     },
     "license": "proprietary",

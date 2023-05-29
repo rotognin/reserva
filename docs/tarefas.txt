@@ -1,0 +1,5 @@
+- Trazer as páginas de cabeçalho e rodapé do html no carreamento da view,
+  para dentro do controlador, antes de chamar a view
+- Continuar o desenvolvimento.
+- Pegar o script do banco e entender o funcionamento das tabelas, e ir
+  montando a lógica do sistema

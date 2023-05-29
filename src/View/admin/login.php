@@ -1,49 +1,33 @@
-<html>
-    <head>
-        <title>Reserva de hotel</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,300,700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="html/css/w3.css">
-    </head>
-    <body>
-        <div class="w3-container w3-margin-top">
-            <div class="w3-card-4">
-                <header class="w3-container w3-blue">
-                    <h1>Hotel Paraíso no Céu - <i>Administrativo</i></h1>
-                </header>
-                <div class="w3-container">
-                    <form class="w3-container" method="POST" action="<?php echo $rota('efetuarlogin', 'admin') ?>">
-                        <div class="input-group input-group-sm mb-3" style="margin: 0 auto;">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1">Login:&nbsp</span>
-                            </div>
-                            <input type="text" class="form-control" id="login" name="login" size="30px" required autofocus>
-                        </div>
-                        <div class="input-group input-group-sm mb-3" style="margin: 0 auto;">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1">Senha:</span>
-                            </div>
-                            <input type="password" class="form-control" id="senha" name="senha" size="30px" required>
-                        </div>
-                        <br>
-                        <input type="submit" value="Entrar" class="btn botao">
-                    </form>
-                    <br>
-                    <?php  
-                        if ($mensagem != ''){
-                            echo '<div class="w3-panel w3-red>';
-                                echo '<h3>Aviso!</h3>';
-                                echo '<p>' . $mensagem . '</p>';
-                            echo '</div>';
-                        }
-                    ?>
-                </div>
-                <footer class="w3-container w3-blue w3-center w3-padding">
-                    <a href="<?php echo $rota('principal'); ?>">Voltar ao menu principal</a>
-                </footer>
-                    
-            </div>
+<div class="container-fluid">
+    <div class="card mt-1">
+        <div class="card-header pb-0">
+            <h2>Hotel Paraíso no Céu</h2>
+            <p><i><strong>Acesso Administrativo</strong></i></p>
         </div>
-    </body>
-</html>
+        <div class="card-body">
+            <form class="form-inline" method="post" action="<?php echo $rota('efetuarlogin', 'admin') ?>">
+                <div class="form-group mr-4">
+                    <label for="login"><strong>Login: &nbsp;</strong></label>
+                    <input type="text" class="form-control" id="login" name="login" required autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="password"><strong>Senha: &nbsp;</strong></label>
+                    <input type="password" class="form-control" id="senha" name="senha" required>
+                </div>
+                <input type="submit" value="Entrar" class="btn btn-success ml-2">
+            </form>
+            <?php
+            if ($mensagem != '') {
+                echo '<div class="alert alert-warning">';
+                echo '<h3>Aviso!</h3>';
+                echo '<p>' . $mensagem . '</p>';
+                echo '</div>';
+            }
+            ?>
+        </div>
+        <div class="card-footer">
+            <a href="<?php echo $rota('principal'); ?>" class="btn btn-secondary btn-sm">Voltar ao menu principal</a>
+        </div>
+
+    </div>
+</div>

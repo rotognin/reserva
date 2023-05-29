@@ -12,14 +12,14 @@ class AdminController extends Controller
         parent::view('admin.login', ['mensagem' => $mensagem]);
     }
 
-    public static function efetuarlogin(array $post, array $get, string $mensagem)
+    public static function efetuarlogin(array $post, array $get, string $mensagem = '')
     {
-        if ($post['login'] == '' || $post['senha'] == ''){
+        if ($post['login'] == '' || $post['senha'] == '') {
             $mensagem = 'Favor informar o login e a senha';
             self::login($post, $get, $mensagem);
             exit;
         }
 
-
+        self::view('admin.index');
     }
 }

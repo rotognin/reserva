@@ -26,26 +26,26 @@ class Controller
         $view = str_replace('.', DS, $view);
         $arquivo = '.' . DS . 'src' . DS . 'View' . DS . $view . '.php';
 
-        if (!file_exists($arquivo)){
+        if (!file_exists($arquivo)) {
             echo '.... Arquivo não existe ... ' . $arquivo;
             die();
         }
 
-        if (!empty($array)){
-            foreach($array as $var => $valor){
+        if (!empty($array)) {
+            foreach ($array as $var => $valor) {
                 $$var = $var;
                 $$var = $valor;
             }
         }
 
-        $rota = function(string $acao = '', string $controlador = ''){
+        $rota = function (string $acao = '', string $controlador = '') {
             $link = 'index.php?';
 
-            if (!empty($controlador)){
+            if (!empty($controlador)) {
                 $link .= 'control=' . $controlador . '&';
             }
 
-            if (!empty($acao)){
+            if (!empty($acao)) {
                 $link .= 'action=' . $acao;
             }
 
@@ -53,9 +53,20 @@ class Controller
         };
 
         ob_start();
+        require_once(__DIR__ . '/../View/html/header.php');
+        $header = ob_get_contents();
+        ob_end_clean();
+
+        ob_start();
         require_once $arquivo;
         $pagina = ob_get_contents();
         ob_end_clean();
-        echo $pagina;
+
+        ob_start();
+        require_once(__DIR__ . '/../View/html/footer.php');
+        $footer = ob_get_contents();
+        ob_end_clean();
+
+        echo $header . $pagina . $footer;
     }
 }
